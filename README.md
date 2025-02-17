@@ -7,6 +7,8 @@ A fun and interactive memory card game built with HTML, CSS, and JavaScript. Tes
 ## 💸 Donate Me
 https://saweria.co/stevenmorison
 
+https://paypal.me/stevencodelab?country.x=ID&locale.x=en_US
+
 ## 🌟 Features
 
 - Three difficulty levels:
