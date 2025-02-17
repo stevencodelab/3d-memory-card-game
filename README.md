@@ -4,6 +4,9 @@
 
 A fun and interactive memory card game built with HTML, CSS, and JavaScript. Test and improve your memory skills while having fun!
 
+## 💸 Donate Me
+https://saweria.co/stevenmorison
+
 ## 🌟 Features
 
 - Three difficulty levels:
@@ -159,5 +162,4 @@ Enjoy the game and happy matching! 🎉
 stevencodelab@gmail.com
 ```
 
-## 💸 Donate Me
-https://saweria.co/stevenmorison
+
