@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="icon/apple-icon.png" type="image/x-icon"> 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Memory Card CSS -->
+    <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body class="theme-default">
+    <div class="particles" id="particles"></div>
+    <h1 class="game-title">Memory Game</h1>
+    
+    <div class="game-container">
+        <div class="controls">
+            <div class="stats">
+                <div class="stat-item">
+                    <span>Time:</span>
+                    <span id="timer" class="stat-value">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <span>Moves:</span>
+                    <span id="moves" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>Matches:</span>
+                    <span id="matches" class="stat-value">0</span>
+                </div>
+            </div>
+            <div class="settings">
+                <select id="difficulty" class="difficulty-select">
+                    <option value="8">Easy (4x4)</option>
+                    <option value="12">Medium (4x6)</option>
+                    <option value="18">Hard (6x6)</option>
+                </select>
+                <select id="theme" class="theme-select">
+                    <option value="default">Default Theme</option>
+                    <option value="neon">Neon Theme</option>
+                    <option value="pastel">Pastel Theme</option>
+                    <option value="dark">Dark Theme</option>
+                </select>
+                <button id="soundToggle" class="button sound-button">
+                    <span class="sound-icon">🔊</span>
+                </button>
+                <button id="showHighScores" class="button" onclick="showHighScores()">High Scores</button>
+                <button class="button" onclick="restartGame()">New Game</button>
+            </div>
+        </div>
+        <div class="game-grid" id="gameGrid"></div>
+    </div>
+
+    <!-- Win Screen -->
+    <div class="win-screen" id="winScreen">
+        <h2>Congratulations! 🎉</h2>
+        <p>You won in <span id="finalMoves" class="stat-value">0</span> moves!</p>
+        <p>Time: <span id="finalTime" class="stat-value">00:00</span></p>
+        <button class="button" onclick="restartGame()">Play Again</button>
+        <button class="button" onclick="showHighScores()">View High Scores</button>
+    </div>
+
+    <!-- High Scores Screen -->
+    <div class="high-scores" id="highScores">
+        <h2>High Scores 🏆</h2>
+        <div class="scores-list">
+            <div class="difficulty-scores" id="easyScores">
+                <h3>Easy Mode</h3>
+                <ul></ul>
+            </div>
+            <div class="difficulty-scores" id="mediumScores">
+                <h3>Medium Mode</h3>
+                <ul></ul>
+            </div>
+            <div class="difficulty-scores" id="hardScores">
+                <h3>Hard Mode</h3>
+                <ul></ul>
+            </div>
+        </div>
+        <button class="button" onclick="closeHighScores()">Close</button>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="flipSound" src="sounds/flip.mp3" preload="auto"></audio>
+    <audio id="matchSound" src="sounds/match.mp3" preload="auto"></audio>
+    <audio id="winSound" src="sounds/win.mp3" preload="auto"></audio>
+    <audio id="bgMusic" src="sounds/bgm.mp3" loop preload="auto"></audio>
+
+    <!-- Credit -->
+    <div class="credit">
+        Created by <a href="https://stevencodelab.github.io/" target="_blank">Stevencodelab</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
